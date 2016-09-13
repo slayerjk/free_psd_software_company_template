@@ -1,0 +1,314 @@
+/* TYPOGRAPHY ______________________________________________________________________
+header .top h1 = 22px/16px "HeliosCond Bold"; #ffffff;
+header .top span = 14px/16px "HeliosCond"; #ffffff;
+header .top .menu a = 10px/auto "HeliosCond"; #ffffff;
+header .bottom span = 26px/auto "HeliosCond"; #343457;
+header .bottom em = 28.7px/auto "HeliosCond"; #343457;
+header .bottom b = 43.06px/auto "HeliosCond"; #343457;
+header .bottom i = 20px/auto "HeliosCond"; #343457;
+--
+main .about-us h2 = 14px/auto "HeliosCond"; #ffffff;
+main .about-us h3 = bold 9px/12.5px "Verdana"; #ffffff;
+main .about-us p = 9px/12.5px "Verdana"; #ffffff;
+main .links a = 12px/15px "HeliosCond"; #ffffff;
+--
+footer = 11px/auto "Verdana"; #a9a9c1; 
+_________________________________________________________________________________ */
+@import url(http://fonts.googleapis.com/css?family=Philosopher&subset=cyrillic);
+@font-face {
+	font-family: "HeliosCond";
+	src: url(../fonts/HE_CN___.TTF) format('truetype');
+}
+@font-face {
+	font-family: HeliosLight;
+	src: url('../fonts/HE__L___.TTF') format('truetype');
+}
+@font-face {
+	font-family: "HeliosCond Bold";
+	src: url('../fonts/HE_CN__B.TTF') format('truetype');
+}
+@media screen and (max-width: 768px){
+	body{
+		width: 102.4em;
+	}
+}
+html{ 
+    font-size:100%; /*необходимо для IE*/
+	width: 100%;
+} 
+body {
+    width: 100%;
+    font-size: 0.625em; /* 62.5% = 10px*/
+    background-color: #585887;
+    color: #ffffff;
+}
+.content {
+    margin: 0 auto;
+    width: 76em;/* 760px; 40%*/
+}
+/* HEADER -------------------------------------------------------- */
+header {
+    position:relative;
+    border-bottom: 0.2 solid #44446b;
+}
+header .top {
+    margin-top: -1em;
+	border-bottom: 0.1em solid #44446b;
+    background: url("../images/header-top-bg.png") repeat;
+}
+header .top .content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+header .top .logo {
+    position: relative;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: auto;
+    padding: 1.5em 0em 2.1em 6.6em;
+    width: 19.7em; /* 197px/10px */
+    color: #ffffff;
+    text-decoration: none;
+}
+header .top .content img {
+    position: absolute;
+    top: 1.7em;
+    left: 2em;
+}
+header .top .content h1{
+    margin: 0;
+    font: bold 2.2em "HeliosCond", sans-serif; /* 22px/10px */
+    color: #ffffff;
+}
+header .top .content span {
+    font:  1.4em "HeliosCond" , sans-serif; /* 14px/10px */
+    color: #ffffff;
+}
+header .top .content .menu{
+    align-self: flex-end;
+    width: 38em; /* 380/10*/
+    background: url('../images/header-menu.png') no-repeat ;
+    background-size: cover;
+}
+header .top .content .menu ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    border-top-left-radius: 1.3em;
+    list-style: none;
+}
+header .top .content .menu ul li{
+    display: inline-block;
+    padding: 0.6em 1.3em 0.5em 0em; /*7/380 13/380 */
+    border-right: 0.2em dotted #44446b; /* 2px */
+}
+header .top .content .menu ul li:last-child{
+    padding-right: 0;
+    border-right: none;
+}
+header .top .content .menu ul li a {
+    font : 1em "HeliosCond", sans-serif; /* 10px */
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+header .top .content .menu ul li a:hover{
+    font-style: italic;
+}
+header .bottom{
+    position: relative;
+	background: linear-gradient(to right, #76769d 0%, #d3d3df 100%);
+    opacity: 0.7;
+    border-bottom: 1.5em solid #44446b;/*10px*/
+    border-image: url('../images/header-bottom-border.png') 30 round;
+}
+header .bottom .content{
+    position:relative;
+    padding: 1.3em 0 3.3em 0;/*13 48(+59 - border)*/
+}
+header .bottom .content .bg1{
+    position: absolute;
+    top: -1.5em;/*-15px/10*/
+    left: 0;
+    width: 27.8em;/*278/10*/
+	height: 19.3em;/*193/10*/
+    background: url("../images/header-bottom-bg1.png") no-repeat center center;
+    opacity: 0.8;
+}
+header .bottom .content .bg2{
+    position: absolute;
+    top: 0;
+    right: 2em;/*20/10*/
+    width: 11em;/*110/10*/
+    height: 17.9em;/*179/10*/
+    background: url("../images/header-bottom-bg2.png") no-repeat center center;
+}
+header .bottom .content .bg3{
+    position: absolute;
+    bottom: 2.5em;/*25px/10*/
+    right: 0;
+    width: 35.9em;/*359/10*/
+    height: 1.2em;/*12/10*/
+    background: url("../images/header-bottom-stripes.png") no-repeat center center;
+}
+header .bottom .content .text-block{
+    /*padding-left: 34.7em ;/*347px/10px*/*/
+}
+header .bottom .content .text-block .word1{
+    padding-left: 13.08em;/*340*/
+    font: 2.6em "HeliosCond" ; /* 26px */
+    color: #a1a1b9;
+}
+header .bottom .content .text-block .word2{
+    margin-top: 0.5226480836em;/*15px/28.7*/
+    padding-left: 12.2648083624em; /* 352/28.7*/
+    font: normal 2.87em "HeliosCond"; /* 28.7px/10px*/
+    color: #9494ac;
+}
+header .bottom .content .text-block .word3 {
+    margin-top: -0.116117046em;
+    padding-left: 9.6377148165em; /* 415/43.06*/
+    font: normal 4.306em "HeliosCond"; /*43.06px/10px */
+    color: #9090a8;
+}
+header .bottom .content .text-block .word4 {
+    display: block;
+    margin-top: -0.5em;
+    padding-left: 20.5em; /* 410/20*/
+    font: normal 2em "HeliosCond"; /* 20px*/
+    color: #9b9bb2;
+}
+/* MAIN -------------------------------------------------------- */
+main{
+    background: ;
+}
+main .content{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 2.5em 3.2em 2.5em 2.8em;/*35-32-25-28*/
+}
+main .content .bg1 {
+    position: absolute;
+    top: 4.5em;
+    left:0;
+    width: 17.4em;/*174*/
+    height: 20.2em;/*202*/
+    background: url("../images/about-us-stains-left.png") no-repeat;
+}
+main .content .bg2 {
+    position: absolute;
+    top: 0em;
+    right:3.5em;
+    width: 22.1em;/*221*/
+    height: 20.7em;/*207*/
+    background: url("../images/about-us-stains-right.png") no-repeat 0 -1.3em;
+}
+main .content .about-us{
+    position: relative;
+    width: 44.5em;/*445*/
+    border-top: 0.1em dashed #9090af;/*#9090af;*/
+    border-left: 0.1em dashed #9090af;
+}
+main .content .about-us .title{
+    margin-left: 0;
+    margin-bottom: 1em;
+    padding: 1.2em 0 1.2em 1.4em;/*12-0-12-0*/
+    background: url("../images/about-us-title-gradient.png") no-repeat;   
+}
+main .content .about-us .title h2{
+    margin:0;
+    font: 1.4em "HeliosCond"; /* 14px*/
+    color: #d3d3df;
+}
+main .content .about-us .title h2 img{
+    margin-right: 0.33em;/*4/14*/ 
+    opacity: 0.7;
+}
+main .content .about-us .text-block{
+    padding-left:1.4em;
+    padding-right: 6.2em;
+}
+main .content .about-us .text-block h3 {
+    margin: 0;
+    font: bold 0.9em/1.25em "Verdana"; /* 9px/12.5px*/
+    color: #d3d3df;
+}
+main .content .about-us .text-block p{
+    margin: 0;
+    font: 0.9em/1.25em "Verdana"; /* 9px/12.5px*/
+    text-align: justify;
+    color: #d3d3df;
+}
+main .content .links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 21.1em;/*213(-12)*/
+}
+main .content .links .link{
+    position: relative;
+    margin-bottom: 1.8em;/*18*/
+    padding: 1.2em 0 1.6em 5.5em;/*12-72-16-55*/
+    font: 1.2em/1.5em "HeliosCond"; /*12px/15px*/
+    color: #ffffff;
+    text-decoration: none;
+    border: 0.1em dashed #8484a6;
+}
+main .content .links .link:hover{
+    background: rgba(137, 137, 169, 0.3);/*#8b8bac;*/
+    
+}
+main .content .links .link:last-of-type{
+    margin-bottom: 0;   
+}
+main .content .links .link .icon{
+    max-width: 100%;
+}
+main .content .links .link:nth-of-type(1) .icon{
+    position: absolute;
+    top: 0.7em;
+    left: 0.5em;
+    display: block;
+    width: 41px;
+    height: 33px;
+    background: url("../images/link-icons-sprite.png") no-repeat -5px -5px;
+}
+main .content .links .link:nth-of-type(2) .icon{
+    position: absolute;
+    top: 0.7em;
+    left: 0.5em;
+    display: block;
+    width: 42px;
+    height: 33px;
+    background: url("../images/link-icons-sprite.png") no-repeat -56px -5px;
+}
+main .content .links .link:nth-of-type(3) .icon{
+    position: absolute;
+    top: 0.7em;
+    left: 0.5em;
+    display: block;
+    width: 42px;
+    height: 33px;
+    background: url("../images/link-icons-sprite.png") no-repeat -108px -5px;
+}
+/* FOOTER -------------------------------------------------------- */
+footer {
+    padding: 0.9em 0;/*9-0-9-0*/
+	background: #44446b;
+	text-align: center;
+}
+footer .content {
+    font: 1.1em "Verdana", sans-serif; /*11px*/
+    color: #a9a9c1; 
+}
